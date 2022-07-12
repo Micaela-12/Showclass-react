@@ -1,13 +1,14 @@
 import './App.css'
-import NavBar from './components/NavBar';
-import ItemList from './components/ItemListContainer';
+import NavBar from './components/NavBar'
+import ItemLisContainer from './containers/ItemListContainer'
+
 
 
 function App() {
   return (
     <div className="App">
      <NavBar />
-     <ItemList />
+     <ItemLisContainer  greating="Nuestra lista de shows!"/>
 </div>
   );
 }

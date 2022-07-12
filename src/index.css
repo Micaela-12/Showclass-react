@@ -60,3 +60,56 @@ header {
 .header__contenedor li:hover ul {
   display: block;
 }
+
+.header__boton {
+  color: white;
+  font-family: 'Hind', sans-serif;
+  background-color: black;
+  font-size: 15px;
+  border-color: blueviolet;
+}
+
+.contenedor__contador {
+  border: 1pxs solid white;
+  display: flex;
+  background-color: blueviolet;
+  position: relative;
+  color: white;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  display: flex;
+}
+
+.productos {
+  color: blueviolet;
+  margin: 0 auto;
+  background: var(--card-color);
+  color:blueviolet;
+  width: 400px;
+  padding: 20px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.377);
+  border-radius: 20px; 
+  font-size: 20px;
+}
+
+.productos_titulo {
+  margin: 0 auto;
+  background: blueviolet;
+  color: black;
+  width: 400px;
+  padding: 20px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.377);
+  border-radius: 20px; 
+  font-size: 20px;
+}
+
+.h3 {
+  text-decoration: underline;
+}
+.greating {
+  text-decoration: underline;
+  font-size: 25px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
