@@ -8,6 +8,8 @@ const Item = ({ product }) => {
 <div className='productos_titulo'>{product.title}</div>
 <div className='productos'>{product.price}</div>
 <div className='productos'>{product.duration}</div>
+<div className='productos'>{product.imag}</div>
+
     </div>
     )
 }

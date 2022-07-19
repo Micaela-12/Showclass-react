@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ItemCount from '../components/ItemCount'
-import products from '../data/products.json'
+import products from '../data/products'
 import ItemList from '../components/ItemList'
 
 
@@ -12,7 +12,7 @@ const ItemLisContainer = ({ greating }) => {
 
     const myPromise = new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(products);
+            resolve(products );
         }, 300);
 
     });
