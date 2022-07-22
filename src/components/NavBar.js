@@ -1,17 +1,18 @@
-import CartWidget from "./CartWidget"
+import CartWidget from "./CartWidget";
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     return (
-        <header className="header">
-            <h1 className="header__TitleIndex">Showclass Producciones!</h1>
-            <nav className="header__contenedor">
+        <header className="Header">
+            <h1 className="header__TitleIndex">Showclass Producciones! </h1>
             <CartWidget />
+            <nav className="header__contenedor">
                 <ul>
-                    <li><button type="button" className="header__color">Inicio</button></li>
-                    <li><button type="button" className="header__color">15 años</button></li>
-                    <li><button type="button" className="header__color">Casamiento</button></li>
-                    <li><button type="button" className="header__color">Cooporativo</button></li>
-                    <li><button type="button" className="header__color">Cumpleaños</button></li>
+                    <Link to="/"><li><button type="button" className="header__color">Inicio</button></li></Link>
+                    <Link to="/category/1"><li><button type="button" className="header__color">Cantantes</button></li></Link>
+                    <Link to="/category/2"><li><button type="button" className="header__color">Bailarines</button></li></Link>
+                    <Link to="/category/3"><li><button type="button" className="header__color">Los mas seleccionados</button></li></Link>
+                    <Link to="/category/4"><li><button type="button" className="header__color">Especiales</button></li></Link>
                 </ul>
             </nav>
         </header>
