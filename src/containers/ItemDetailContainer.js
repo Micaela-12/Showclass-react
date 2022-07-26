@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { useEffect, useState, customfetch } from 'react'
 import productos from '../data/products'
@@ -11,8 +10,8 @@ const ItemDetailContainer = () => {
 
 
     useEffect (() =>{
-    if(id=== undefined) {
-    const dataPromise = new Promise((resolve, reject) => {
+
+        const dataPromise = new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(productos);
         }, 1000);
@@ -20,25 +19,12 @@ const ItemDetailContainer = () => {
 
     dataPromise. then(
         (respuesta) => {
-            setData(respuesta);
+            setData(respuesta.find(productos=>productos.id === parseInt(id)));
         },
 
-    ) 
-    }else {
-        const dataPromise = new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(productos.filter (item => item.id=== parseInt(id)));
-            }, 1000);
-        });
+    []);
+    });
     
-        dataPromise. then(
-            (respuesta) => {
-                setData(respuesta);
-            },
-        )
-    }
-    }, [id]);
-
     return (
         <>  
         <div>

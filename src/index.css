@@ -70,15 +70,17 @@ header {
 }
 
 .contenedor__contador {
-  border: 1pxs solid white;
-  display: flex;
-  background-color: blueviolet;
-  position: relative;
-  color: white;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  align-items: center;
-  display: flex;
+  color: blueviolet;
+  margin: 0 auto;
+  background: var(--card-color);
+  color:blueviolet;
+  width: 400px;
+  padding: 20px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.377);
+  border-radius: 20px; 
+  font-size: 20px;
+  text-align: center;
+  display:inline-flexbox;
 }
 
 .productos {
@@ -91,6 +93,7 @@ header {
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.377);
   border-radius: 20px; 
   font-size: 20px;
+  text-align: center;
 }
 
 .productos_titulo {
@@ -102,10 +105,19 @@ header {
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.377);
   border-radius: 20px; 
   font-size: 20px;
+  text-align: center;
 }
 
 .h3 {
   text-decoration: underline;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.377);
+  border-radius: 20px; 
+  font-size: 20px;
+  width: 200px;
+  text-align: center;
+  background-color: blueviolet;
+  color: black;
+
 }
 .greating {
   text-decoration: underline;
@@ -130,3 +142,4 @@ header {
   color: blueviolet;
 
 }
+

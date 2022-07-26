@@ -1,18 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import ItemCount from './ItemCount'
 
 
 const Item = ({ product }) => {
+    const onAdd = (param) => {console.log(`la cantidad comprada es ${param}` )}
+
     return (
         <div>
             <h3 className='h3'>Producto:</h3>
             <div className='productos_titulo'>{product.title}</div>
             <div className='productos'>{product.price}</div>
             <div className='productos'>{product.duration}</div>
-            
-            <Link className='productos_titulo' to={`/item/${product.id}`}>Detalles</Link>
-        </div>
-
+            <Link className='productos' to={`/item/${product.id}`}>Ver en detalle</Link>
+            <ItemCount className='productos' initial={1} stock={product.stock} onAdd={onAdd} />
+</div>
     )
 }
 

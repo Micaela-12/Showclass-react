@@ -1,21 +1,31 @@
 import React from 'react'
 import ItemCount from '../components/ItemCount'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 
-const ItemDetail = ( {item}) => {
-    const onAdd = (param) => {console.log('la cantidad comprada es ${param}' )}
-    return( <>
+const ItemDetail = ({ item }) => {
+    const [CarritoCompra, setCarritoCompra] = useState(false);
+
+    const onAdd = (qty) => {
+        setCarritoCompra(true)
+    }
+    return (<>
         <div>
-            <h2>{item.title}</h2>
-            <p>{item.price}</p>
-            <p>{item.duration}</p>
+            <p className='h3'>Producto</p>
+            <h2 className='productos_titulo'>{item.title}</h2>
+            <p className='productos'>{item.price}</p>
+            <p className='productos'>{item.duration}</p>
+{
+            CarritoCompra 
+        ? <Link className='productos' to='/Cart'>Terminar la compra</Link>
+        : <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+
+}
         </div>
+    </>
 
-
-        </>
-       
     )
 }
 
-export default ItemDetail;
+export default ItemDetail

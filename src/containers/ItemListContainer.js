@@ -41,13 +41,27 @@ useEffect (() =>{
 
 return (
     <>
-    
+        <div className="header__boton">
+            {productList.map((item, index) => {
+
+
+                return (
+                    <>
+                        <div key={index}>
+
+                            <item
+                                item={item} />
+
+                        </div>
+                        </>
+                )
+            }
+            )}
+            </div>
         <ItemList items={productList} />
         <ItemCount initial={1} stock={5} onAdd={onAdd} />
-
     </>
 );
 }
 
 export default ItemLisContainer;
-
