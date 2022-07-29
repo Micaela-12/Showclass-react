@@ -41,7 +41,7 @@ useEffect (() =>{
 
 return (
     <>
-        <div className="header__boton">
+        <div>
             {productList.map((item, index) => {
 
 

@@ -117,13 +117,18 @@ header {
   text-align: center;
   background-color: blueviolet;
   color: black;
-
 }
 .greating {
   text-decoration: underline;
   font-size: 25px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+  box-shadow: 0px 50px 55px rgba(108, 5, 168, 0.377);
+  border-radius:20px; 
+  font-size: 20px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  display:inline-block;
+  width: 400px;
 }
 .ItemDetailContainer {
   background-color: black;
