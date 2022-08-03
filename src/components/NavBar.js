@@ -5,7 +5,8 @@ const NavBar = () => {
     return (
         <header className="Header">
             <h1 className="header__TitleIndex">Showclass Producciones! </h1>
-            <CartWidget />
+            <Link to={"/Cart"}><CartWidget className='productos'></CartWidget></Link>
+        
             <nav className="header__contenedor">
                 <ul>
                     <Link to="/"><li><button type="button" className="header__color">Inicio</button></li></Link>
@@ -14,6 +15,8 @@ const NavBar = () => {
                     <Link to="/category/3"><li><button type="button" className="header__color">Los mas seleccionados</button></li></Link>
                     <Link to="/category/4"><li><button type="button" className="header__color">Especiales</button></li></Link>
                 </ul>
+               
+                    <Link to={"/Cart"}></Link>
             </nav>
         </header>
     );
