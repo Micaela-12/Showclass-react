@@ -161,4 +161,9 @@ header {
   color: blueviolet;
 
 }
+.carrito {
+  font-size: 60px;
+  color: blueviolet;
+  justify-content: space-evenly;
 
+}

@@ -13,7 +13,6 @@ const Item = ({ product }) => {
             <div className='productos'>{product.price}</div>
             <div className='productos'>{product.duration}</div>
             <div><Link className='header__boton' to={`/item/${product.id}`}>Ver en detalle</Link></div>
-            <ItemCount className='productos' initial={1} stock={product.stock} onAdd={onAdd} />
 </div>
     )
 }

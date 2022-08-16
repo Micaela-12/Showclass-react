@@ -2,60 +2,34 @@ import React from 'react'
 import { useEffect, useState, customfetch } from 'react'
 import ItemDetail from '../components/ItemDetail'
 import { useParams } from 'react-router'
-import {db} from "../utils/firebaseConfig"
-import { collection, getDocs } from "firebase/firestore";
-
-const ItemDetailContainer = () => {
-    const [Data, setData] = useState({});
-    const { id } = useParams();
+import { where, getDocs, query } from "firebase/firestore";
+import { productsCollection } from '../utils/firebaseConfig';
+import { Toast } from 'bootstrap';
+import { getFirestore, doc, getDoc} from 'firebase/firestore';
 
 
-    useEffect (() =>{
-    const firestoreFetch = async () => {
-        const querySnapshot = await getDocs(collection(db, "productos"));
-            
-            const dataFromFirestore = querySnapshot.docs.map((doc) => ({
-                id:doc.id,
-                ...doc.data()
-            }))
-            
-            return dataFromFirestore
-            }
+export default function ItemDetailContainer () {
+    const [loading, setLoading] = useState(true)
+    const [item, setItem ] = useState({})
+    const { id } = useParams ()
+
+
+
+        useEffect(() => {
+            const itemFilter = query(productsCollection, where('id', '==', Number(id)))
+            debugger
+            getDocs(itemFilter)
+                .then(result => setItem(result.docs[0].data()))
+                .catch(error => Toast.error("error al cargar producto"))
+                .finally(() => 
+                    setLoading(false))
+
     
-        if (id === undefined){
-            firestoreFetch()
-            .then(result=> setData(result))
-            .catch (err=> setData(err)) 
-        } else {
+        }, [id])
+return (
     
-            firestoreFetch()
-            .then(result=> setData(result.find(item=> item.id === id)))
-            .catch (err=> setData(err))
-     }
-    }, [id])
-        
-       /* const dataPromise = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(productos);
-        }, 1000);
-    });
+        <ItemDetail item={item}/>
 
-    dataPromise. then(
-        (respuesta) => {
-            setData(respuesta.find(productos=>productos.id === parseInt(id)));
-        },
-
-    []);
-    }); */
-    
-    return (
-        <>  
-        <div>
-            <ItemDetail item={Data}/>
-            </div>    
-        </>
-
-    )
+)
 }
 
-export default ItemDetailContainer ;
