@@ -5,7 +5,6 @@ import { collection, serverTimestamp, setDoc, doc, updateDoc, increment } from "
 import { db } from "../utils/firebaseConfig"
 
 
-
 const Cart = () => {
   const test = useContext(CartContext)
   const createOrder = () => {
@@ -49,8 +48,7 @@ const Cart = () => {
     <>
       <div>
         <div>
-          <h2 className="h3">Carrito de compras</h2>
-          <div className="carrito">No hay productos en el carrito</div>
+          <h2 className="detail">Carrito de compras</h2>
           <div>
                   <Link to="/"><button className="greating" >Seguir comprando</button></Link>
                 </div>
@@ -63,15 +61,15 @@ const Cart = () => {
             <div>
               <div>
               </div>
-              <div >
+              <div className="detail" >
                 <h5 className="productos_titulo">{item.title}</h5>
                 <p className="productos">{item.duration}</p>
                 <p className="productos">Valor: ${item.price}</p>
 
                 <p className="productos_titulo">cantidad: {item.quantity}</p>
-                <p className="productos">valor total: ${item.price * item.quantity}</p>
-                <button href="#" className="greating" onClick={() => test.removeProduct(item.id)}>Eliminar producto</button>
+                <p className="productos">Total: ${item.price * item.quantity}</p>
               </div>
+              <button href="#" className="greating" onClick={() => test.removeProduct(item.id)}>Eliminar producto</button>
             </div>
 
           ))
@@ -82,7 +80,7 @@ const Cart = () => {
               ? <>
                
                 <div className="col ">
-                  <h5 className="productos_titulo">Total: ${test.totalPrice()}</h5>
+                  <h5 className="productos_titulo">Total de los productos: ${test.totalPrice()}</h5>
                 </div>
               </>
               : <div>
@@ -93,7 +91,7 @@ const Cart = () => {
         </div>
       </div>
       <div>
-        <button href="#" className="greating" onClick={() => test.clearCart()}>Eliminar Carrito</button>
+        <button className="greating" onClick={() => test.clearCart()}>Eliminar Carrito</button>
       </div>
       <button className="h3" onClick={createOrder}>Finalizar compra!</button>
     </>

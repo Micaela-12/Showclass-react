@@ -24,12 +24,12 @@ const ItemDetail =({item})=>{
     <div>
         <div>
         </div>
-            <div>
+            <div className="detail">
             <h1 className="productos_titulo">{item.title}</h1>
             <h2 className="productos">{item.duration}</h2>
             <p className="productos">{item.price}</p>
-            <div>
-                {itemCount ===0 
+            <div className="detail">
+                {itemCount === 0 
                 ?<ItemCount stock={item.stock} initial={0} onAdd={onAdd}/>
                 :<Link to='/Cart'><button className="greating">Continuar al carrito</button></Link>
             }

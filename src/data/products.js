@@ -1,6 +1,7 @@
 import React from 'react'
 
 
+
 const products = [
     {
         id:1,
@@ -8,7 +9,8 @@ const products = [
         price: 20000,
         duration: "45 minutos de duracion",
         categoryId: 1,
-        stock:19
+        stock:19,
+
     },
     {
         id:2,
