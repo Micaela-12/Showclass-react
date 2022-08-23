@@ -1,70 +1,35 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# PROYECTO REACT -:boom::collision: Showclass Producciones :boom::collision:- 
 
-## Available Scripts
+*Proyeto creado para el curso de REACT JS dictado por el profesor Alex Marin Mendez, dentro de la institucion Coder House :heart_on_fire:.
 
-In the project directory, you can run:
+## - DESCRIPCION DEL PROYECTO -
 
-### `npm start`
+*El proyecto trata de un e-commerse, de la productora de eventos, Showclass, donde se encontraran todos los shows disponibles.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## -ESTRUCTURA-
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+*Está compuesta por una vista principal, con unb header (el cual se encuentra en todas las vistas). Con link de navegación que se van a ir desplazando a lo largo de la compra. También en el header se colocó un ícono de carrito de compras con un contador,Se dividen a los productos por categorías. En el body se encuentan todos los productos separados en cards, con su descripción, un contador con botones para agregar o quitarlo al carrito y un botón para individualizar el producto en una nueva vista, la cual muestra, su nombre, precio, stock y detalle. También tiene su contador con botones para agregar o quitar el producto al carrito de compras, finalizando la compra dejando la informacion dentro de la Firebase :100:.
+## -INSTRUCCIONES-
+### Comenzar
+*Para comenzar, se necesitará clonar el repositorio, abriendo la consola de git y colocando el comando
 
-### `npm test`
+*git clone https://github.com/Micaela-12/Showclass-react
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*Luego abrir la carpeta descargada en VSC o cualquier otro IDE
 
-### `npm run build`
+### Despliegue
+*Dentro del editor de codigo, deberan abrir la terminal, preferentemente bash y colocar el comando npm install Luego instalar React-router-dom colocando el comando npm i react-router-dom Y por ultimo ejecutar el comando npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## -CONSTRUIDO CON :eye_speech_bubble:-
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- HTML
+- CSS
+- JavaScript
+- React
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### -LIBRERIAS-
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*FIREBASE: Firebase es un servicio de base de datos en la nube de Google y lo utilice para guardar los productos y ordenes de compra.
+*MATERIAL UI: Es una libreria de iconos. Utilizada en el Navbar.
+*REACT-ROUTER-DOM: Librería que facilita la navegacion, utilizada para generar un correcto flow de navegación.
