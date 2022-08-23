@@ -7,6 +7,8 @@
 
 *El proyecto trata de un e-commerse, de la productora de eventos, Showclass, donde se encontraran todos los shows disponibles.
 
+![image](https://user-images.githubusercontent.com/99339247/186281575-484539c9-a36a-4ae8-b9cd-43f2b0d7fa3c.png)
+
 ## -ESTRUCTURA-
 
 *Está compuesta por una vista principal, con unb header (el cual se encuentra en todas las vistas). Con link de navegación que se van a ir desplazando a lo largo de la compra. También en el header se colocó un ícono de carrito de compras con un contador,Se dividen a los productos por categorías. En el body se encuentan todos los productos separados en cards, con su descripción, un contador con botones para agregar o quitarlo al carrito y un botón para individualizar el producto en una nueva vista, la cual muestra, su nombre, precio, stock y detalle. También tiene su contador con botones para agregar o quitar el producto al carrito de compras, finalizando la compra dejando la informacion dentro de la Firebase :100:.
